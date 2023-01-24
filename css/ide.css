@@ -1,19 +1,19 @@
 :root {
-    --judge0-black: #333;
-    --judge0-gray: #CED4DA;
-    --judge0-red: #FF8787;
-    --judge0-pink: #F783AC;
-    --judge0-grape: #DA77F2;
-    --judge0-violet: #9775FA;
-    --judge0-indigo: #748FFC;
-    --judge0-blue: #4DABF7;
-    --judge0-cyan: #3BC9DB;
-    --judge0-teal: #38D9A9;
-    --judge0-green: #69DB7C;
-    --judge0-lime: #A9E34B;
-    --judge0-yellow: #FFD43B;
-    --judge0-orange: #FFA94D;
-    --judge0-theme: var(--judge0-indigo);
+    --babushkacoder-black: #333;
+    --babushkacoder-gray: #CED4DA;
+    --babushkacoder-red: #FF8787;
+    --babushkacoder-pink: #F783AC;
+    --babushkacoder-grape: #DA77F2;
+    --babushkacoder-violet: #9775FA;
+    --babushkacoder-indigo: #748FFC;
+    --babushkacoder-blue: #4DABF7;
+    --babushkacoder-cyan: #3BC9DB;
+    --babushkacoder-teal: #38D9A9;
+    --babushkacoder-green: #69DB7C;
+    --babushkacoder-lime: #A9E34B;
+    --babushkacoder-yellow: #FFD43B;
+    --babushkacoder-orange: #FFA94D;
+    --babushkacoder-theme: var(--babushkacoder-indigo);
 }
 
 html, body {
@@ -24,7 +24,7 @@ html, body {
 }
 
 body {
-    background: url(/images/judge0_background.png) no-repeat center center fixed;
+    background: url(/images/babushkacoder_background.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -88,7 +88,7 @@ body {
 }
 
 #navigation-message a {
-    color: var(--judge0-theme);
+    color: var(--babushkacoder-theme);
     font-weight: bold;
 }
 
@@ -119,11 +119,11 @@ body {
 }
 
 #run-btn {
-    background-color: var(--judge0-theme);
+    background-color: var(--babushkacoder-theme);
 }
 
 #site-footer, #status-line {
-    background-color: var(--judge0-theme);
+    background-color: var(--babushkacoder-theme);
     bottom: 0;
     font-family: "Droid Sans Mono", monospace, monospace, "Droid Sans Fallback";
     font-size: 13px;

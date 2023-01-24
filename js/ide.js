@@ -1,4 +1,4 @@
-var defaultUrl = localStorageGetItem("api-url") || "https://ce.judge0.com";
+var defaultUrl = localStorageGetItem("api-url") || "https://ce.babushkacoder.com";
 var apiUrl = defaultUrl;
 var wait = localStorageGetItem("wait") || true;
 var check_timeout = 300;
@@ -135,7 +135,7 @@ function showMessages() {
 
 function loadMessages() {
     $.ajax({
-        url: `https://minio.judge0.com/public/ide/messages.json?${Date.now()}`,
+        url: `https://minio.babushkacoder.com/public/ide/messages.json?${Date.now()}`,
         type: "GET",
         headers: {
             "Accept": "application/json"
@@ -295,7 +295,7 @@ function run() {
         if (sqliteAdditionalFiles === "") {
             fetchAdditionalFiles = true;
             $.ajax({
-                url: `https://minio.judge0.com/public/ide/sqliteAdditionalFiles.base64.txt?${Date.now()}`,
+                url: `https://minio.babushkacoder.com/public/ide/sqliteAdditionalFiles.base64.txt?${Date.now()}`,
                 type: "GET",
                 async: true,
                 contentType: "text/plain",
@@ -425,7 +425,7 @@ $(window).resize(function() {
 $(document).ready(function () {
     updateScreenElements();
 
-    console.log("Hey, Judge0 IDE is open-sourced: https://github.com/judge0/ide. Have fun!");
+    console.log("Hey, babushkacoder IDE is open-sourced: https://github.com/babushkacoder/ide. Have fun!");
 
     $selectLanguage = $("#select-language");
     $selectLanguage.change(function (e) {
@@ -453,7 +453,7 @@ $(document).ready(function () {
     });
 
     $navigationMessage = $("#navigation-message span");
-    $updates = $("#judge0-more");
+    $updates = $("#babushkacoder-more");
 
     $(`input[name="editor-mode"][value="${editorMode}"]`).prop("checked", true);
     $("input[name=\"editor-mode\"]").on("change", function(e) {
@@ -475,7 +475,7 @@ $(document).ready(function () {
             run();
         } else if (keyCode == 119) { // F8
             e.preventDefault();
-            var url = prompt("Enter URL of Judge0 API:", apiUrl);
+            var url = prompt("Enter URL of babushkacoder API:", apiUrl);
             if (url != null) {
                 url = url.trim();
             }
@@ -615,11 +615,11 @@ var bashSource = "echo \"hello, world\"";
 var basicSource = "PRINT \"hello, world\"";
 
 var cSource = "\
-// Powered by Judge0\n\
+// Powered by babushkacoder\n\
 #include <stdio.h>\n\
 \n\
 int main(void) {\n\
-    printf(\"Hello Judge0!\\n\");\n\
+    printf(\"Hello babushkacoder!\\n\");\n\
     return 0;\n\
 }\n\
 ";
@@ -777,7 +777,7 @@ main(_) ->\n\
 ";
 
 var executableSource = "\
-Judge0 IDE assumes that content of executable is Base64 encoded.\n\
+babushkacoder IDE assumes that content of executable is Base64 encoded.\n\
 \n\
 This means that you should Base64 encode content of your binary,\n\
 paste it here and click \"Run\".\n\
@@ -785,7 +785,7 @@ paste it here and click \"Run\".\n\
 Here is an example of compiled \"hello, world\" NASM program.\n\
 Content of compiled binary is Base64 encoded and used as source code.\n\
 \n\
-https://ide.judge0.com/?kS_f\n\
+https://ide.babushkacoder.com/?kS_f\n\
 ";
 
 var fsharpSource = "printfn \"hello, world\"\n";
@@ -893,8 +893,8 @@ object Main {\n\
 ";
 
 var sqliteSource = "\
--- On Judge0 IDE your SQL script is run on chinook database (https://www.sqlitetutorial.net/sqlite-sample-database).\n\
--- For more information about how to use SQL with Judge0 API please\n\
+-- On babushkacoder IDE your SQL script is run on chinook database (https://www.sqlitetutorial.net/sqlite-sample-database).\n\
+-- For more information about how to use SQL with babushkacoder API please\n\
 -- watch this asciicast: https://asciinema.org/a/326975.\n\
 SELECT\n\
     Name, COUNT(*) AS num_albums\n\
@@ -923,7 +923,7 @@ End Module\n\
 ";
 
 var c3Source = "\
-// On the Judge0 IDE, C3 is automatically\n\
+// On the babushkacoder IDE, C3 is automatically\n\
 // updated every hour to the latest commit on master branch.\n\
 module main;\n\
 \n\
@@ -1018,7 +1018,7 @@ print(f\"Hello from processor with rank {world_rank} out of {world_size} process
 ";
 
 var nimSource = "\
-# On the Judge0 IDE, Nim is automatically\n\
+# On the babushkacoder IDE, Nim is automatically\n\
 # updated every day to the latest stable version.\n\
 echo \"hello, world\"\n\
 ";
@@ -1034,7 +1034,7 @@ print(\"hello, world\")\n\
 ";
 
 var bosqueSource = "\
-// On the Judge0 IDE, Bosque (https://github.com/microsoft/BosqueLanguage)\n\
+// On the babushkacoder IDE, Bosque (https://github.com/microsoft/BosqueLanguage)\n\
 // is automatically updated every hour to the latest commit on master branch.\n\
 \n\
 namespace NSMain;\n\
@@ -1300,7 +1300,7 @@ var languageIdTable = {
     1024: 24
 }
 
-var extraApiUrl = "https://extra-ce.judge0.com";
+var extraApiUrl = "https://extra-ce.babushkacoder.com";
 var languageApiUrlTable = {
     1001: extraApiUrl,
     1002: extraApiUrl,
